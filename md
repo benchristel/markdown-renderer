@@ -3,7 +3,9 @@
 require "redcarpet"
 
 renderer = Redcarpet::Markdown.new(
-  Redcarpet::Render::HTML,
+  Redcarpet::Render::HTML.new(
+    with_toc_data: true,
+  ),
   tables: true,
   no_intra_emphasis: true,
 )
